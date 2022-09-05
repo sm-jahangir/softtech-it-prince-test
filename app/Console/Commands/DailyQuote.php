@@ -46,7 +46,7 @@ class DailyQuote extends Command
         $users = User::all();
         foreach ($users as $user) {
             Mail::raw("{$key} -> {$data}", function ($mail) use ($user) {
-                $mail->from('digamber@positronx.com');
+                $mail->from('samraatjahangir@gmail.com');
                 $mail->to($user->email)
                     ->subject('Daily New Quote!');
             });
